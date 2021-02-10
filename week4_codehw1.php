@@ -2,10 +2,13 @@
 <html>
 <head>
 <h1>
-Web Development Week 4-Code HW 1: Correct Change Counter
+Web Development Week 4-Code HW 1:
 </h1>
 </head>
 <body>
+  <h2>
+    Challenge 1: Correct Change Counter
+  </h2>
 
   <?php
   $chng = 159;
@@ -20,7 +23,14 @@ Web Development Week 4-Code HW 1: Correct Change Counter
   $count = array($a, $b, $c, $d);
 
   /* I need to be able to:
-  ge the floor of a given value 
+  ge the floor of a given value
+
+  $a = floor($chng/dllr)
+  $chng = #chng % $dllr
+
+// sketching new function:
+  $n3 = floor($n1/$n2);
+  $n1 = $n1%n2;
   */
   function chng_count($n1, $n2)
   {
@@ -54,7 +64,6 @@ Web Development Week 4-Code HW 1: Correct Change Counter
    $chng = $chng - ($nk * $d);
  }
 
-
  echo "Your change is " . $a ;
  if ($a > 1){
    echo " dollars, ";
@@ -84,6 +93,58 @@ Web Development Week 4-Code HW 1: Correct Change Counter
    echo " nickel, ";
  }
  echo " and $chng cents.";
+ echo "<br>";
+ echo "<br>";
+
+?>
+
+<h2>
+  Challenge 2: 99 Bottles of Beer on the Wall
+</h2>
+<?php
+//Challenge 2: 99 Bottles of Beer
+$bttl = 99;
+$pass = $bttl-1;
+/*while ($bttl > 0){
+  echo "$bttl bottles of beer on the wall, $bttl bottles of beer.";
+  echo "<br>";
+  echo "Take one down, pass it around, $pass bottles of beer on the wall.";
+  echo "<br>";
+  if ($pass >0)
+  $bttl = $pass;
+}*/
+
+//have a count of bottles
+//subtract 1 from count of Bottles
+//if count of bottle is less than zero,
+//save new count of bottles
+//repeat
+
+/*do{
+  echo "$bttl bottles of beer on the wall, $bttl bottles of beer.";
+  echo "<br>";
+  echo "Take one down, pass it around, $pass bottles of beer on the wall.";
+  echo "<br>";
+  if ($pass >0){
+      $bttl-1;
+  }
+}while ($bttl > 0)*/
+
+//using a do...while loop to iterate over the lyrics of the song.
+//using the vairbales $pass variable to decrease the number of bottles each run
+//nesting an if statement in side the do...while loop to change the number of bottles in the first line of the song for when song repeats
+do{
+  echo "$bttl bottles of beer on the wall, $bttl bottles of beer." . "<br>";
+  if ($pass >1){
+    echo "Take one down, pass it around, $pass bottles of beer on the wall." . "<br>";
+  }
+  else {
+    echo "Take one down, pass it around, $pass bottles of beer on the wall." . "<br>";
+  }
+  $bttl = --$bttl;
+}while (--$pass > 0);
+
+
 
 
 /* /first trial, crashed PHP casue while loop jsut keeps going
