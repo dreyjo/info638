@@ -23,7 +23,7 @@ Web Development Week 4-Code HW 1:
   $count = array($a, $b, $c, $d);
 
   /* I need to be able to:
-  ge the floor of a given value
+  get the floor of a given value
 
   $a = floor($chng/dllr)
   $chng = #chng % $dllr
@@ -95,7 +95,6 @@ Web Development Week 4-Code HW 1:
  echo " and $chng cents.";
  echo "<br>";
  echo "<br>";
-
 ?>
 
 <h2>
@@ -201,6 +200,17 @@ do{
     $n3 = floor($n1/$n2);
     return $n3;
   }
+  */
+
+  /* I need to be able to:
+  get the floor of a given value
+
+  $a = floor($chng/dllr)
+  $chng = #chng % $dllr
+
+// sketching new function:
+  $n3 = floor($n1/$n2);
+  $n1 = $n1%n2;
   */
 
 
