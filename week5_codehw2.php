@@ -39,56 +39,44 @@
 
   //print_r($n);
 
+  // in function $i is a given isbn
+  //$n splits the isbn
+  //count is the number for validation
   function isbn($i){
+    //use str_split to break given isbn.
+    //variable n holds the array of characters from the ISBN
     $n = str_split($i,1);
     $count = 11;
+      foreach($n as $nums){
 
-      foreach($n as $t) {
-        --$count;
-        $t = array_sum($n * $count);
+        //array sum only accepts an array as input, can't do math inside.
+        //so I have to do the multiplication, then the array sum, then divide
 
-        return $t;
+        //$m is an empty list that I place the products of multiplying into
+        //--count decreases the value of count as it's multiplied across the array
+        $m[]= $nums * (--$count);
+
+        //v is a variable holding the sum of the values in the array $m
+        $v = array_sum($m);
+      }
+
+      if($v % 11 != 0){
+        echo "This ISBN is valid, as are you!";
+      }
+      else {
+        echo "This ISBN is not valid, but you are!";
+      }
     }
 
 
-  }
-
   isbn($i);
 
-  //Feb14th Problems:
-  //currently array_sum gives an erryr saying it expects an array
-  //so str_split isn't creating an array just spllitting our given string
-
-  //secondly our count varaible is going up from 1 as it goes across our array.
-
-
-
-
-  //where $i is a variable holding an isbn
-  /*
-  function isbn($i){
-    $n = explode(" ", $i);
-    $count = 10;
-    foreach($n as $item){
-
-    /*$v= array_sum($item * (--$count));*/
-  //  $v=$count*$item;
-  //  echo "($count x $item = ()";
-    /*return $t;*/
-//  }
-//}
-//  isbn($i);
-/*  if sum % > 0
-  return echo "ISBN is not valid!"
-
-  else
-  echo "ISBN is valid!"
-
-}
-  */
   ?>
   <h2>
     Challenge 2: Coin Toss
   </h2>
+
+  <?php
+  ?>
 </body>
 </html>
