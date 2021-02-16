@@ -56,7 +56,8 @@
         //--count decreases the value of count as it's multiplied across the array
         $m[]= $nums * (--$count);
 
-        //v is a variable holding the sum of the values in the array $m
+        //$s is a variable holding the sum of the values in the array $m
+        //$v is a variable holding the remainder fo the sum divided by 11 (division is done with the modulus)
         $s= array_sum($m);
         $v= $s % 11;
       }
