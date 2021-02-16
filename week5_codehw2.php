@@ -57,10 +57,11 @@
         $m[]= $nums * (--$count);
 
         //v is a variable holding the sum of the values in the array $m
-        $v = array_sum($m);
+        $s= array_sum($m);
+        $v= $s % 11;
       }
 
-      if($v % 11 != 0){
+      if($v = 0){
         echo "This ISBN is valid, as are you!";
       }
       else {
@@ -70,7 +71,10 @@
 
 
   isbn($i);
+//Question: This "works" in that I get a return value
+//but the answer I get is "not valid" even though I used a real ISBN
 
+//also need to figure out how to compensate for ISBNs with x
   ?>
   <h2>
     Challenge 2: Coin Toss
