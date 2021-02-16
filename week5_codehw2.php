@@ -31,13 +31,7 @@
   $i = 1478011041;
   //(10*1) + (9*4) + (8*7) + (7*8) + (6*0) + (5*1) + (4*1) + (3*0) + (2*4) + (1*1)
   //sum = 176
-  //176/11 = 16 (no remainder)
-
-
-  //$n = explode(" ", $i);
-  //$n = str_split($i,1);
-
-  //print_r($n);
+  //176/11 = 16 
 
   // in function $i is a given isbn
   //$n splits the isbn
