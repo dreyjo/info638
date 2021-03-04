@@ -133,7 +133,7 @@ do{
 }while ($c9>0);
 
 echo "<h3>"."Coin Toss Challenge Part 2"."<h3>";
-//echo "<p>"."Create a loop to flip coin until you have flipped exactly two heads in a row. Stop the loop, print number of tosses"."<p>";
+echo "<p>"."Create a loop to flip coin until you have flipped exactly two heads in a row. Stop the loop, print number of tosses"."<p>";
 
 do{
   //count will hold number of flips
@@ -152,7 +152,7 @@ do{
       ++$count;
       ++$headcount;
       echo "two heads in a row!"."<br>";
-      echo "number of flips:". $count;
+      echo "number of flips:". $count."<br>";
     }
     //if next flip is tails, increase flip count, decrease heads count.
     else{
@@ -162,11 +162,45 @@ do{
     }
   }
 }while($headcount !== 2);
-//I keep getting two flips until head in a row. Which means i'm getting heads on th efirst flip and heads on the second. I'm unsure why.
+//I keep getting two flips until two heads in a row. Which means i'm getting heads on the first flip and heads on the second. I'm unsure why.
 
 
 //echo "<h3>"."Coin Toss Challenge Part 3"."<h3>";
+//echo "write a function that takes as an argument the number of heads in a row you would want to flip for"
 ?>
 <h2>Challenge 2: Book list</h2>
+<?php
+$bookdata = array(
+  array("Title","Author","Pages","Type","Price"),
+  array("PHP and MySQL Web Development","Luke Welling",144,"paperback",31.63),
+  array("Web Design with HTML, CSS, JavaScript and jQuery","Jon Duckett",135,"paperback",41.23),
+  array("PHP Cookbook: Solutions & Examples for PHP Programmers","David Sklar",14,"paperback",40.88),
+  array("JavaScript and JQuery: Interactive Front-End Web Development","Jon Duckett",251,"paperback",22.09),
+  array("Modern PHP: New Features and Good Practices","Josh Lockhart",7,"paperback",28.49),
+  array("Programming PHP","Kevin Tatroe",26,"paperback",28.96)
+);
+
+//print_r($bookdata);
+
+echo "<table>";
+foreach($bookdata as $row){
+  echo "<tr>";
+  foreach($row as $item){
+    echo "<td>".$item."</td>";
+  }
+  echo "<tr>";
+}
+echo "</table>";
+
+/*foreach ($bookdata as $rows){
+  echo "<table><tr>$rows</tr></table>";
+  foreach ($rows as $item){
+
+  }
+}*/
+
+ ?>
+
+
 </body>
 </html>
