@@ -133,7 +133,7 @@ do{
 }while ($c9>0);
 
 echo "<h3>"."Coin Toss Challenge Part 2"."<h3>";
-echo "<p>"."Create a loop to flip coin until you have flipped exactly two heads in a row. Stop the loop, print number of tosses"."<p>";
+//echo "<p>"."Create a loop to flip coin until you have flipped exactly two heads in a row. Stop the loop, print number of tosses"."<p>";
 
 do{
   //count will hold number of flips
@@ -142,23 +142,27 @@ do{
   $headcount = 0;
   $toss = mt_rand(0,1);
 
+  //If random number is 0 (heads) increase flip count, increase heads count and flip again.
   if ($toss == $h){
     ++$count;
     ++$headcount;
+    //if next flip is also heads increase flip count, increase heads count, print "two heads!" and the number of flips.
     $again = mt_rand(0,1);
     if($again == $h){
       ++$count;
       ++$headcount;
-      echo "two heads in a row!";
+      echo "two heads in a row!"."<br>";
       echo "number of flips:". $count;
     }
+    //if next flip is tails, increase flip count, decrease heads count.
     else{
       $toss;
       ++$count;
       --$headcount;
     }
   }
-}while($headcount<2);
+}while($headcount !== 2);
+//I keep getting two flips until head in a row. Which means i'm getting heads on th efirst flip and heads on the second. I'm unsure why.
 
 
 //echo "<h3>"."Coin Toss Challenge Part 3"."<h3>";
