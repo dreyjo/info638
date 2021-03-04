@@ -110,10 +110,12 @@ do{
   //if random number is tails, print tails
   /*instead of printing we will use images.*/
     if (mt_rand(0,1) == $h){
+      echo '<img src="info638/images/medusa_head.png"/>';
       echo "Heads!"; //the image source shuld go here as well
     }
 
     else {
+      echo '<img src="info638/images/tree_tails.jpg/">';
       echo "Tails!";
     }
   --$c9;
