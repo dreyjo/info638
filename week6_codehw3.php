@@ -19,11 +19,11 @@ $c7=7;
 $c9=9;
 $h = 0;
 $t = 1;
-$head = '<img src="images/medusa_head.png" width="200" height="200"/>';
-$tails = '<img src="images/tanzania_tails.jpg" width="200" height="200"/>';
+$head = '<img src="images/medusa_head.png" width="200" height="200" alt="an image of medusa is shown, snakes adroning her face"/>';
+$tails = '<img src="images/tanzania_tails.jpg" width="200" height="200" alt="image of a coin from Tanzania features a roaring chimera, a mythical animal with the head and body of a lion, wings and talons of an eagle and a snake for a tail"/>';
 
 //1 flip
-echo "<h3>"."One Flip"."<h3>";
+echo "One Flip";
 do{
   //generate a random number
   $flip = mt_rand(0,1);
@@ -33,19 +33,19 @@ do{
   /*instead of printing we will use images.*/
     if (mt_rand(0,1) == $h){
       echo $head;
-      echo "<h4>"."Heads!"."<h4>";
+      echo "<em>"."Heads!"."<em>";
     }
 
     else {
       echo $tails;
-      echo "<h4>"."Tails!"."<h4>";
+      echo "<em>"."Tails!"."<em>";
     }
   --$c1;
   echo "<br>";
 }while ($c1>0);
 
 //3 flips
-echo "<h3>"."Three Flips"."<h3>";
+echo "Three Flips";
 do{
   //generate a random number
   $flip = mt_rand(0,1);
@@ -55,19 +55,19 @@ do{
   /*instead of printing we will use images.*/
     if (mt_rand(0,1) == $h){
       echo $head;
-      echo "<h4>"."Heads!"."<h4>";
+      echo "<em>"."Heads!"."<em>";
     }
 
     else {
       echo $tails;
-      echo "<h4>"."Tails!"."<h4>";
+      echo "<em>"."Tails!"."<em>";
     }
   --$c3;
   echo "<br>";
 }while ($c3>0);
 
 //5 flips
-echo "<h3>"."Five Flips"."<h3>";
+echo "Five Flips";
 do{
   //generate a random number
   $flip = mt_rand(0,1);
@@ -77,19 +77,19 @@ do{
   /*instead of printing we will use images.*/
     if (mt_rand(0,1) == $h){
       echo $head;
-      echo "<h4>"."Heads!"."<h4>";
+      echo "<em>"."Heads!"."<em>";
     }
 
     else {
       echo $tails;
-      echo "<h4>"."Tails!"."<h4>";
+      echo "<em>"."Tails!"."<em>";
     }
   --$c5;
   echo "<br>";
 }while ($c5>0);
 
 //7 flips
-echo "<h3>"."Seven Flips"."<h3>";
+echo "Seven Flips";
 do{
   //generate a random number
   $flip = mt_rand(0,1);
@@ -99,19 +99,19 @@ do{
   /*instead of printing we will use images.*/
     if (mt_rand(0,1) == $h){
       echo $head;
-      echo "<h4>"."Heads!"."<h4>";
+      echo "<em>"."Heads!"."<em>";
     }
 
     else {
       echo $tails;
-      echo "<h4>"."Tails!"."<h4>";
+      echo "<em>"."Tails!"."<em>";
     }
   --$c7;
   echo "<br>";
 }while ($c7>0);
 
 //9 flips
-echo "<h3>"."Nine Flips"."<h3>";
+echo "Nine Flips";
 do{
   //generate a random number
   $flip = mt_rand(0,1);
@@ -121,12 +121,12 @@ do{
   /*instead of printing we will use images.*/
     if (mt_rand(0,1) == $h){
       echo $head;
-      echo "<h4>"."Heads!"."<h4>";
+      echo "<em>"."Heads!"."<em>";
     }
 
     else {
       echo $tails;
-      echo "<h4>"."Tails!"."<h4>";
+      echo "<em>"."Tails!"."<em>";
     }
   --$c9;
   echo "<br>";
@@ -198,8 +198,8 @@ echo "number of flips:".$flips."<br>";
 }
 
 
-echo "<h3>"."Coin Toss Challenge Part 3"."<h3>";
-echo "Write a function that takes as an argument the number of heads in a row you would want to flip for";
+echo "<b>"."Coin Toss Challenge Part 3"."<b>";
+echo "Write a function that takes as an argument the number of heads in a row you would want to flip for"";
 flip_a_coin(8);
 ?>
 <h2>Challenge 2: Book list</h2>
