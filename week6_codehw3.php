@@ -164,9 +164,43 @@ do{
 }while($headcount !== 2);
 //I keep getting two flips until two heads in a row. Which means i'm getting heads on the first flip and heads on the second. I'm unsure why.
 
+//Funtion Building
 
-//echo "<h3>"."Coin Toss Challenge Part 3"."<h3>";
-//echo "write a function that takes as an argument the number of heads in a row you would want to flip for"
+function flip_a_coin($x){
+$count = $x;
+$headcount = 0;
+$flips = 0;
+$h = 0;
+$t = 1;
+$toss = mt_rand(0,1);
+
+do {
+if($toss == $h){
+  --$count;
+  ++$headcount;
+  ++$flips;
+  $again = mt_rand(0,1);
+}
+  if($again == $h){
+  --$count;
+  ++$headcount;
+  ++$flips;
+}
+  else{
+  $loop = mt_rand(0,1);
+  --$count;
+  ++$flips;
+}
+}while($count>0);
+
+echo "<br>"."number of heads:".$headcount."<br>";
+echo "number of flips:".$flips."<br>";
+}
+
+
+echo "<h3>"."Coin Toss Challenge Part 3"."<h3>";
+echo "Write a function that takes as an argument the number of heads in a row you would want to flip for";
+flip_a_coin(8);
 ?>
 <h2>Challenge 2: Book list</h2>
 <?php
@@ -180,9 +214,8 @@ $bookdata = array(
   array("Programming PHP","Kevin Tatroe",26,"paperback",28.96)
 );
 
-//print_r($bookdata);
 
-echo "<table>";
+echo "<table border=10>";
 foreach($bookdata as $row){
   echo "<tr>";
   foreach($row as $item){
@@ -192,12 +225,6 @@ foreach($bookdata as $row){
 }
 echo "</table>";
 
-/*foreach ($bookdata as $rows){
-  echo "<table><tr>$rows</tr></table>";
-  foreach ($rows as $item){
-
-  }
-}*/
 
  ?>
 
