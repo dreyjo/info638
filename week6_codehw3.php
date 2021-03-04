@@ -131,6 +131,37 @@ do{
   --$c9;
   echo "<br>";
 }while ($c9>0);
+
+echo "<h3>"."Coin Toss Challenge Part 2"."<h3>";
+echo "<p>"."Create a loop to flip coin until you have flipped exactly two heads in a row. Stop the loop, print number of tosses"."<p>";
+
+do{
+  //count will hold number of flips
+  $count = 0;
+  //headcount will hold heads position. Will count until it get's to 2
+  $headcount = 0;
+  $toss = mt_rand(0,1);
+
+  if ($toss == $h){
+    ++$count;
+    ++$headcount;
+    $again = mt_rand(0,1);
+    if($again == $h){
+      ++$count;
+      ++$headcount;
+      echo "two heads in a row!";
+      echo "number of flips:". $count;
+    }
+    else{
+      $toss;
+      ++$count;
+      --$headcount;
+    }
+  }
+}while($headcount<2);
+
+
+//echo "<h3>"."Coin Toss Challenge Part 3"."<h3>";
 ?>
 <h2>Challenge 2: Book list</h2>
 </body>
