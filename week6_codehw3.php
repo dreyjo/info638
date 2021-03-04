@@ -19,6 +19,8 @@ $c7=7;
 $c9=9;
 $h = 0;
 $t = 1;
+$head = '<img src="images/medusa_head.png" width="200" height="200"/>';
+$tails = '<img src="images/tanzania_tails.jpg" width="200" height="200"/>';
 
 //1 flip
 echo "<h3>"."One Flip"."<h3>";
@@ -30,11 +32,13 @@ do{
   //if random number is tails, print tails
   /*instead of printing we will use images.*/
     if (mt_rand(0,1) == $h){
-      echo "Heads!"; //the image source shuld go here as well
+      echo $head;
+      echo "<h4>"."Heads!"."<h4>";
     }
 
     else {
-      echo "Tails!";
+      echo $tails;
+      echo "<h4>"."Tails!"."<h4>";
     }
   --$c1;
   echo "<br>";
@@ -50,11 +54,13 @@ do{
   //if random number is tails, print tails
   /*instead of printing we will use images.*/
     if (mt_rand(0,1) == $h){
-      echo "Heads!"; //the image source shuld go here as well
+      echo $head;
+      echo "<h4>"."Heads!"."<h4>";
     }
 
     else {
-      echo "Tails!";
+      echo $tails;
+      echo "<h4>"."Tails!"."<h4>";
     }
   --$c3;
   echo "<br>";
@@ -70,11 +76,13 @@ do{
   //if random number is tails, print tails
   /*instead of printing we will use images.*/
     if (mt_rand(0,1) == $h){
-      echo "Heads!"; //the image source shuld go here as well
+      echo $head;
+      echo "<h4>"."Heads!"."<h4>";
     }
 
     else {
-      echo "Tails!";
+      echo $tails;
+      echo "<h4>"."Tails!"."<h4>";
     }
   --$c5;
   echo "<br>";
@@ -90,11 +98,13 @@ do{
   //if random number is tails, print tails
   /*instead of printing we will use images.*/
     if (mt_rand(0,1) == $h){
-      echo "Heads!"; //the image source shuld go here as well
+      echo $head;
+      echo "<h4>"."Heads!"."<h4>";
     }
 
     else {
-      echo "Tails!";
+      echo $tails;
+      echo "<h4>"."Tails!"."<h4>";
     }
   --$c7;
   echo "<br>";
@@ -110,13 +120,13 @@ do{
   //if random number is tails, print tails
   /*instead of printing we will use images.*/
     if (mt_rand(0,1) == $h){
-      echo '<img src="info638/images/medusa_head.png"/>';
-      echo "Heads!"; //the image source shuld go here as well
+      echo $head;
+      echo "<h4>"."Heads!"."<h4>";
     }
 
     else {
-      echo '<img src="info638/images/tree_tails.jpg/">';
-      echo "Tails!";
+      echo $tails;
+      echo "<h4>"."Tails!"."<h4>";
     }
   --$c9;
   echo "<br>";
