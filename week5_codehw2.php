@@ -31,7 +31,7 @@
   $i = 1478011041;
   //(10*1) + (9*4) + (8*7) + (7*8) + (6*0) + (5*1) + (4*1) + (3*0) + (2*4) + (1*1)
   //sum = 176
-  //176/11 = 16 
+  //176/11 = 16
 
   // in function $i is a given isbn
   //$n splits the isbn
@@ -64,7 +64,7 @@
       }
     }
 
-
+  echo "ISBN is $i" . "<br>";
   isbn($i);
 //Question: This "works" in that I get a return value
 //but the answer I get is "not valid" even though I used a real ISBN
@@ -76,6 +76,25 @@
   </h2>
 
   <?php
+  // Logic Planning:
+
+  /*Goal:
+  1. flip a coin - heads or tails
+  2. Use images to show heads or tails
+  3. use mt_rand with a minmum and maximum to generate a number */
+
+  //Set variables for heads and tails
+  $h = 0;
+  $t = 1;
+  //later we can also set our image(s) to appear depending on the number
+
+  if (mt_rand(0,1) == $h){
+    echo "Heads!"; /* the image source shuld go here as well*/
+  }
+
+  else {
+    echo "Tails!";
+  }
   ?>
 </body>
 </html>
