@@ -84,17 +84,56 @@
   3. use mt_rand with a minmum and maximum to generate a number */
 
   //Set variables for heads and tails
-  $h = 0;
+/*  $h = 0;
   $t = 1;
   //later we can also set our image(s) to appear depending on the number
 
   if (mt_rand(0,1) == $h){
-    echo "Heads!"; /* the image source shuld go here as well*/
+    echo "Heads!"; //the image source shuld go here as well
   }
 
   else {
     echo "Tails!";
-  }
+  */
+
+
+  /*
+  //So a funtion might look like
+  /*function flip(){
+  $h=0;
+  mt_rand(0,1);
+  $fs = array(1,2,3,4,5,6,7,8,9);
+  $f1 = substr
+  $f3 =
+  $f5 =
+  $f7 =
+  $f9 =
+
+  foreach
+
+}*/
+
+
+//Logic Planning:
+
+//We need to randomly generate a value as our coin flip
+//for mt_rand 0 is the minum value and 1 is the maximum.
+//just need binary values
+mt_rand(0,1)
+
+We need to have a variable that will hold the outcome of our flip
+$v[] = mt_rand(0,1)
+
+array_count_values($v)
+
+//for 1 flip
+//for 3 flips
+//for 5 flips
+//for 7 flips
+//for 9 flips
+
+We need to repeat mt_rand
+*/
   ?>
 </body>
 </html>
